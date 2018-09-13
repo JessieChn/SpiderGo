@@ -1,12 +1,205 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>列表页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css" data-filtered="filtered">
+    <link rel="stylesheet" href="static/css/me.css">
+
 </head>
 <body>
-<h1>123</h1>
-<h2>456</h2>
-<h3>789</h3>
+
+
+<div class="ui container">
+    <div class="ui text borderless stackable menu small ">
+        <div class="">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img height="83" width="130"  src="static/images/logo.png">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="ui label item">
+            <img src="static/images/bug.png">
+            <h6 class="m-opacity">&nbsp;爬取各大网商</h6>
+        </div>
+        <div class="ui label item">
+            <img src="static/images/bug.png">
+            <h6>&nbsp;爬取各大网商</h6>
+        </div>
+        <div class="ui label item">
+            <img src="static/images/bug.png">
+            <h6>&nbsp;爬取各大网商</h6>
+        </div>
+        <div class="item right fluid menu">
+            <div class=" ui fluid category search">
+                <div class="ui icon input">
+                    <input class="prompt" type="text" placeholder="搜索...">
+                    <i class="search  pink link icon"></i>
+                </div>
+                <div class="results" data-filtered="filtered"></div>
+            </div>
+        </div>
+        <div class="item fluid menu">
+            <button class="ui basic button">
+                <i class=" shopping bag pink icon"></i>
+                收藏袋
+                &nbsp;&nbsp;
+                <div class="floating ui pink label">22</div>
+            </button>
+        </div>
+    </div>
+</div>
+<nav>
+    <div class="ui menu tiny borderless inverted pink stackable" style="padding-top: 0.01em"> <!--style="background-color: #FF1499"-->
+        <div class="ui container">
+            <a class="header item">
+                <h3 class="ui white inverted header">首页</h3>
+            </a>
+            <a class="item">
+                <h3 class="ui white inverted header">手机</h3>
+            </a>
+            <a class="item">
+                <h3 class="ui white inverted header">女装</h3>
+            </a>
+            <a class="item">
+                <h3 class="ui white inverted header">美妆</h3>
+            </a>
+            <a class="item">
+                <h3 class="ui white inverted header">男装</h3>
+            </a>
+            <a class="item">
+                <h3 class="ui white inverted header">家电</h3>
+            </a>
+            <a class="item">
+                <h3 class="ui white inverted header">鞋包</h3>
+            </a>
+            <a class="item">
+                <h3 class="ui white inverted header">配饰</h3>
+            </a>
+            <a class="item">
+                <h3 class="ui white inverted header">生活</h3>
+            </a>
+            <a class="item">
+                <h3 class="ui white inverted header">电脑</h3>
+            </a>
+            <div class="right fluid menu">
+                <div class="ui right labeled button inverted">
+                    <div class="ui icon button orange inverted ">
+                        <i class="fork icon inverted"></i>
+                    </div>
+                    <div class="ui label orange basic">
+                        <h3 class="ui white header inverted">分类</h3>
+                    </div>
+                </div>
+                <div class="ui right labeled button inverted">
+                    <div class="ui icon button orange inverted ">
+                        <i class="fork icon inverted"></i>
+                    </div>
+                    <div class="ui label orange secondary basic">
+                        <h3 class="ui white header inverted">公告</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="ui container" style="margin-top: 25px">
+    <div class="ui segments">
+        <div class="ui segment large">
+            <!--<span class="ui secondary grey" style="margin-left: 25px; margin-right: 25px;">分类</span>-->
+            <a class="ui tag label" style="margin-left: 25px; margin-right: 50px;">品牌：</a>
+            <div class="ui horizontal link list">
+                <a class="item active m-margin-right-35" >
+                    华为
+                </a>
+                <a class="item active m-margin-right-35">
+                    诺基亚
+                </a>
+                <a class="item active m-margin-right-35">
+                    小米
+                </a>
+                <a class="item active m-margin-right-35">
+                    vivo
+                </a>
+                <a class="item active m-margin-right-35">
+                    oppo
+                </a>
+                <a class="item active m-margin-right-35">
+                    苹果
+                </a>
+                <a class="item active m-margin-right-35">
+                    努比亚
+                </a>
+                <a class="item active m-margin-right-35">
+                    荣耀
+                </a>
+                <a class="item active m-margin-right-35">
+                    魅族
+                </a>
+                <a class="item active m-margin-right-35">
+                    锤子
+                </a>
+            </div>
+            <div class="ui text menu">
+                <div class="ui right dropdown item">
+                    More
+                    <i class="dropdown icon"></i>
+                    <div class="menu" data-filtered="filtered">
+                        <div class="item" data-filtered="filtered">Applications</div>
+                        <div class="item" data-filtered="filtered">International Students</div>
+                        <div class="item" data-filtered="filtered">Scholarships</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui pink segment large">
+            <a class="ui tag label" style="margin-left: 25px; margin-right: 25px;">New</a>
+            <div class="ui horizontal link list">
+                <a class="item active">
+                    Terms and Conditions
+                </a>
+                <a class="item active">
+                    Privacy Policy
+                </a>
+                <a class="item active">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+        <div class="ui pink segment large">
+            <a class="ui tag label" style="margin-left: 25px; margin-right: 25px;">New</a>
+            <div class="ui horizontal link list">
+                <a class="item active">
+                    Terms and Conditions
+                </a>
+                <a class="item active">
+                    Privacy Policy
+                </a>
+                <a class="item active">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+        <div class="ui pink segment large">
+            <a class="ui tag label" style="margin-left: 25px; margin-right: 25px;">New</a>
+            <div class="ui horizontal link list">
+                <a class="item active">
+                    Terms and Conditions
+                </a>
+                <a class="item active">
+                    Privacy Policy
+                </a>
+                <a class="item active">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer></footer>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js" data-filtered="filtered"></script>
 </body>
 </html>

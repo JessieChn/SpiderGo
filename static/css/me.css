@@ -1,0 +1,16 @@
+.m-padded-left-mini{
+    padding-left: 120%; !important;  /*1em = 14px*/
+}
+.m-padding-tb-mini{
+    padding-top: 0.2em; !important;
+    padding-bottom: 0.2em; !important;
+}
+.m-pink {
+    color: #FF1499;
+}
+.m-opacity {
+    opacity: 0.5; !important;
+}
+.m-margin-right-35 {
+    margin-right: 30px; !important;
+}
