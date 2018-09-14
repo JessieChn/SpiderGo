@@ -6,7 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>列表页</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css" data-filtered="filtered">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css"
+          data-filtered="filtered">
     <link rel="stylesheet" href="static/css/me.css">
 
 </head>
@@ -14,23 +15,24 @@
 
 
 <div class="ui container">
+    <!--logo和标语-->
     <div class="ui text borderless stackable menu small ">
         <div class="">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <img height="83" width="130"  src="static/images/logo.png">
+            <img height="83" width="130" src="static/images/logo.png">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
         <div class="ui label item">
             <img src="static/images/bug.png">
-            <h6 class="m-opacity">&nbsp;爬取各大网商</h6>
-        </div>
-        <div class="ui label item">
-            <img src="static/images/bug.png">
             <h6>&nbsp;爬取各大网商</h6>
         </div>
         <div class="ui label item">
-            <img src="static/images/bug.png">
-            <h6>&nbsp;爬取各大网商</h6>
+            <img src="static/images/analyse.png">
+            <h6>&nbsp;分析价格趋势</h6>
+        </div>
+        <div class="ui label item">
+            <img src="static/images/money.png">
+            <h6>&nbsp;省钱省力省心</h6>
         </div>
         <div class="item right fluid menu">
             <div class=" ui fluid category search">
@@ -52,7 +54,9 @@
     </div>
 </div>
 <nav>
-    <div class="ui menu tiny borderless inverted pink stackable" style="padding-top: 0.01em"> <!--style="background-color: #FF1499"-->
+    <div class="ui menu tiny borderless inverted pink stackable" style="padding-top: 0.01em">
+        <!--style="background-color: #FF1499"-->
+        <!--首页标签-->
         <div class="ui container">
             <a class="header item">
                 <h3 class="ui white inverted header">首页</h3>
@@ -107,11 +111,14 @@
 </nav>
 <div class="ui container" style="margin-top: 25px">
     <div class="ui segments">
+        <!--品牌选择-->
         <div class="ui segment large">
             <!--<span class="ui secondary grey" style="margin-left: 25px; margin-right: 25px;">分类</span>-->
-            <a class="ui tag label" style="margin-left: 25px; margin-right: 50px;">品牌：</a>
+            <a class="ui tag label"
+               style="margin-left: 25px; margin-right: 50px; padding-left: 28px;padding-right: 28px">品牌：</a>
+
             <div class="ui horizontal link list">
-                <a class="item active m-margin-right-35" >
+                <a class="item active m-margin-right-35">
                     华为
                 </a>
                 <a class="item active m-margin-right-35">
@@ -141,65 +148,383 @@
                 <a class="item active m-margin-right-35">
                     锤子
                 </a>
-            </div>
-            <div class="ui text menu">
-                <div class="ui right dropdown item">
-                    More
-                    <i class="dropdown icon"></i>
-                    <div class="menu" data-filtered="filtered">
-                        <div class="item" data-filtered="filtered">Applications</div>
-                        <div class="item" data-filtered="filtered">International Students</div>
-                        <div class="item" data-filtered="filtered">Scholarships</div>
+                <div class="ui top right attached basic label">
+                    <div class="ui right dropdown item" id="dropdown-one">
+                        More
+                        <div class="menu" data-filtered="filtered">
+                            <div class="item" data-filtered="filtered">Applications</div>
+                            <div class="item" data-filtered="filtered">International Students</div>
+                            <div class="item" data-filtered="filtered">Scholarships</div>
+                            <div class="item" data-filtered="filtered">Applications</div>
+                        </div>
+                        <!--<div class="column">
+                            <h4 class="ui header">Business</h4>
+                            <div class="ui link list">
+                                <a class="item">Design &amp; Urban Ecologies</a>
+                                <a class="item">时装设计</a>
+                                <a class="item">美术</a>
+                                <a class="item">战略设计</a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h4 class="ui header">文科</h4>
+                            <div class="ui link list">
+                                <a class="item">人类学</a>
+                                <a class="item">经济学</a>
+                                <a class="item">媒体研究</a>
+                                <a class="item">Philosophy</a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h4 class="ui header">社会科学</h4>
+                            <div class="ui link list">
+                                <a class="item">食品研究</a>
+                                <a class="item">新闻学</a>
+                                <a class="item">非营利管理</a>
+                            </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
         </div>
+        <!--运行内存选择-->
         <div class="ui pink segment large">
-            <a class="ui tag label" style="margin-left: 25px; margin-right: 25px;">New</a>
+            <a class="ui tag label" style="margin-left: 25px; margin-right: 50px;">
+                运行内存：
+            </a>
             <div class="ui horizontal link list">
-                <a class="item active">
-                    Terms and Conditions
+                <a class="item active m-margin-right-35">
+                    1GB
                 </a>
-                <a class="item active">
-                    Privacy Policy
+                <a class="item active m-margin-right-35">
+                    2GB
                 </a>
-                <a class="item active">
-                    Contact Us
+                <a class="item active m-margin-right-35">
+                    3GB
                 </a>
+                <a class="item active m-margin-right-35">
+                    4GB
+                </a>
+                <a class="item active m-margin-right-35">
+                    6GB
+                </a>
+                <a class="item active m-margin-right-35">
+                    8GB
+                </a>
+                <a class="item active m-margin-right-35">
+                    512MB
+                </a>
+                <div class="ui top right attached basic label">
+                    <div class="ui right dropdown item" id="dropdown-two">
+                        more
+                        <div class="menu" data-filtered="filtered">
+                            <div class="item" data-filtered="filtered">Applications</div>
+                            <div class="item" data-filtered="filtered">International Students</div>
+                            <div class="item" data-filtered="filtered">Scholarships</div>
+                            <div class="item" data-filtered="filtered">Applications</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <!--机身内存选择-->
         <div class="ui pink segment large">
-            <a class="ui tag label" style="margin-left: 25px; margin-right: 25px;">New</a>
+            <a class="ui tag label" style="margin-left: 25px; margin-right: 50px;">
+                机身内存：
+            </a>
             <div class="ui horizontal link list">
-                <a class="item active">
-                    Terms and Conditions
+                <a class="item active  m-margin-right-35">
+                    32GB
                 </a>
-                <a class="item active">
-                    Privacy Policy
+                <a class="item active  m-margin-right-35">
+                    16GB
                 </a>
-                <a class="item active">
-                    Contact Us
+                <a class="item active  m-margin-right-35">
+                    64GB
                 </a>
+                <a class="item active  m-margin-right-35">
+                    128GB
+                </a>
+                <a class="item active  m-margin-right-35">
+                    256GB
+                </a>
+                <a class="item active  m-margin-right-35">
+                    512GB
+                </a>
+                <a class="item active  m-margin-right-35">
+                    1T
+                </a>
+                <div class="ui top right attached basic label">
+                    <div class="ui right dropdown item" id="dropdown-three">
+                        More
+                        <div class="menu" data-filtered="filtered">
+                            <div class="item" data-filtered="filtered">Applications</div>
+                            <div class="item" data-filtered="filtered">International Students</div>
+                            <div class="item" data-filtered="filtered">Scholarships</div>
+                            <div class="item" data-filtered="filtered">Applications</div>
+                        </div>
+                        <!--<div class="column">
+                            <h4 class="ui header">Business</h4>
+                            <div class="ui link list">
+                                <a class="item">Design &amp; Urban Ecologies</a>
+                                <a class="item">时装设计</a>
+                                <a class="item">美术</a>
+                                <a class="item">战略设计</a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h4 class="ui header">文科</h4>
+                            <div class="ui link list">
+                                <a class="item">人类学</a>
+                                <a class="item">经济学</a>
+                                <a class="item">媒体研究</a>
+                                <a class="item">Philosophy</a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h4 class="ui header">社会科学</h4>
+                            <div class="ui link list">
+                                <a class="item">食品研究</a>
+                                <a class="item">新闻学</a>
+                                <a class="item">非营利管理</a>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
             </div>
         </div>
+        <!--选购热点选择-->
         <div class="ui pink segment large">
-            <a class="ui tag label" style="margin-left: 25px; margin-right: 25px;">New</a>
+            <a class="ui tag label" style="margin-left: 25px; margin-right: 50px;">
+                选购热点：
+            </a>
             <div class="ui horizontal link list">
-                <a class="item active">
-                    Terms and Conditions
+                <a class="item active  m-margin-right-35">
+                    全面屏手机
                 </a>
-                <a class="item active">
-                    Privacy Policy
+                <a class="item active  m-margin-right-35">
+                    国产手机
                 </a>
-                <a class="item active">
-                    Contact Us
+                <a class="item active  m-margin-right-35">
+                    拍照手机
                 </a>
+                <a class="item active  m-margin-right-35">
+                    金属机身
+                </a>
+                <a class="item active  m-margin-right-35">
+                    老人手机
+                </a>
+                <a class="item active  m-margin-right-35">
+                    大屏手机
+                </a>
+                <a class="item active  m-margin-right-35">
+                    快速充电
+                </a>
+                <a class="item active  m-margin-right-35">
+                    指纹识别
+                </a>
+                <div class="ui top right attached basic label">
+                    <div class="ui right dropdown item" id="dropdown-four">
+                        More
+                        <div class="menu" data-filtered="filtered">
+                            <div class="item" data-filtered="filtered">Applications</div>
+                            <div class="item" data-filtered="filtered">International Students</div>
+                            <div class="item" data-filtered="filtered">Scholarships</div>
+                            <div class="item" data-filtered="filtered">Applications</div>
+                        </div>
+                        <!--<div class="column">
+                            <h4 class="ui header">Business</h4>
+                            <div class="ui link list">
+                                <a class="item">Design &amp; Urban Ecologies</a>
+                                <a class="item">时装设计</a>
+                                <a class="item">美术</a>
+                                <a class="item">战略设计</a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h4 class="ui header">文科</h4>
+                            <div class="ui link list">
+                                <a class="item">人类学</a>
+                                <a class="item">经济学</a>
+                                <a class="item">媒体研究</a>
+                                <a class="item">Philosophy</a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h4 class="ui header">社会科学</h4>
+                            <div class="ui link list">
+                                <a class="item">食品研究</a>
+                                <a class="item">新闻学</a>
+                                <a class="item">非营利管理</a>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-    <footer></footer>
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<div class="ui container" style="margin-top: 25px;">
+    <h3 class="ui top attached horizontal divider header" style="padding-left: 100px;padding-right: 100px">
+        <i class="product hunt pink icon"></i>
+        商品展示
+    </h3>
+    <div class="ui attached segment">
+       <!-- <div class="ui link cards">
+            <div class="card">
+                <div class="image">
+                    <img width="450" height="450" src="static/images/product.jpg">
+                </div>
+                <div class="content">
+                    <div class="header">Matt Giampietro</div>
+                    <div class="meta">
+                        <a>Friends</a>
+                    </div>
+                    <div class="description">
+                        Matthew is an interior designer living in New York.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        Joined in 2013
+                    </span>
+                    <span>
+                        <i class="user icon"></i>
+                            75 Friends
+                    </span>
+                </div>
+            </div>
+        </div>-->
+        <div class="ui four column grid cards stackable">
+            <div class="column">
+                <div class="ui fluid card">
+                    <div class="image">
+                        <img src="static/images/product.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            小米 红米Note5 全网通版 4GB+64GB 魔力蓝 移动联通电信 4G手机 双卡双待 拍照手机
+                        </div>
+                    </div>
+                    <span class="extra content">
+                        <span class="ui pink header" >
+                            <small>¥</small><big>999</big>
+<!--                            <div class="ui mini inverted orange label">Mini </div>
+                            <div class="ui mini inverted orange label">Mini </div>
+                            <div class="ui mini inverted orange label">Mini </div>-->
+                            <div class="ui orange horizontal label" style="margin-right: 0.01em; margin-left: 2.8em">水果</div>
+                            <div class="ui orange horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">水果</div>
+                            <div class="ui orange horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">水果</div>
+                        </span>
+                    </span>
+
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui fluid pink card">
+                    <div class="image">
+                        <img src="static/images/avator2.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Matt Giampietro</div>
+                        <div class="meta">
+                            <a>Friends</a>
+                        </div>
+                        <div class="description">
+                            Matthew is an interior designer living in New York.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                    <span class="right floated">
+                        Joined in 2013
+                    </span>
+                        <span>
+                        <i class="user icon"></i>
+                            75 Friends
+                    </span>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui fluid card">
+                    <div class="image">
+                        <img src="static/images/avator3.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Matt Giampietro</div>
+                        <div class="meta">
+                            <a>Friends</a>
+                        </div>
+                        <div class="description">
+                            Matthew is an interior designer living in New York.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                    <span class="right floated">
+                        Joined in 2013
+                    </span>
+                        <span>
+                        <i class="user icon"></i>
+                            75 Friends
+                    </span>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui fluid card">
+                    <div class="image">
+                        <img src="static/images/avator4.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Matt Giampietro</div>
+                        <div class="meta">
+                            <a>Friends</a>
+                        </div>
+                        <div class="description">
+                            Matthew is an interior designer living in New York.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                    <span class="right floated">
+                        Joined in 2013
+                    </span>
+                        <span>
+                        <i class="user icon"></i>
+                            75 Friends
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="ui attached header">
+        Attached
+    </h3>
+    <div class="ui attached segment">
+        <p></p>
+    </div>
+    <h3 class="ui bottom attached header">
+        Bottom Attached
+    </h3>
+</div>
+
+
+<footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js" data-filtered="filtered"></script>
+<script>
+    $('#dropdown-one')
+        .dropdown()
+    ;
+    $('#dropdown-two')
+        .dropdown()
+    ;
+    $('#dropdown-three')
+        .dropdown()
+    ;
+    $('#dropdown-four')
+        .dropdown()
+    ;
+</script>
 </body>
 </html>
