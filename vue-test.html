@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css"
+          data-filtered="filtered">
+    <link rel="stylesheet" href="static/css/me.css">
+</head>
+<body>
+
+    <div id="app">
+        <div class="ui container">
+            <div class="ui form">
+                <div class="fields">
+                    <div class="field">
+                        <label>name</label>
+                        <input type="text" placeholder="Name" v-model="name">
+                    </div>
+                </div>
+                <div class="ui compass submit button">Submit</div> <!--@click="add"-->
+            </div>
+            <table class="ui celled table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Ctime</th>
+                        <th>Operation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in list" :key="item.id"><!-- key只接受字符串或number-->
+                        <td>{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.ctime}}</td>
+                        <td><a href="">删除</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<script src="./static/js/vue-2.4.0.js"></script>
+<script src="./static/js/vue-resource-1.3.4.js"></script>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js" data-filtered="filtered"></script>
+<script>
+    //创建vue实例，得到view model
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            name: '',
+            list:[
+                {
+                    id: 1,
+                    name:'五菱宏光',
+                    ctime: new Date()
+                },
+                {
+                    id: 2,
+                    name:'众泰',
+                    ctime: new Date()
+                }
+            ]
+        },
+        created(){ //当vm实例的data 和 methods 初始化完毕后，VM实例会自动执行
+            this.getAllList()
+        },
+        methods: {
+            getAllList(){
+                //获取所有的车的品牌列表
+                //导入了vue resource 这个包后可以直接通过this.$http来发起数据请求
+                this.$http.get('http://localhost:8080/say').then(result => {
+                    if(result.status === 200) {
+                        //成功了
+                        //alert('获取数据成功')
+                        console.log(result.body.message)
+                        this.list = result.body.message
+                    }else{
+                        //alert('获取数据失败')
+                        console.log(result)
+                    }
+                })
+            }
+        }
+    });
+</script>
+</body>
+</html>
