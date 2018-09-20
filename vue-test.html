@@ -36,7 +36,7 @@
                     <tr v-for="item in list" :key="item.id"><!-- key只接受字符串或number-->
                         <td>{{item.id}}</td>
                         <td>{{item.name}}</td>
-                        <td>{{item.ctime}}</td>
+                        <td><a :href="item.url">{{item.url}}</a></td>
                         <td><a href="">删除</a></td>
                     </tr>
                 </tbody>
@@ -73,12 +73,12 @@
             getAllList(){
                 //获取所有的车的品牌列表
                 //导入了vue resource 这个包后可以直接通过this.$http来发起数据请求
-                this.$http.get('http://localhost:8080/say').then(result => {
+                this.$http.get('http://localhost:8088/list').then(result => {
                     if(result.status === 200) {
                         //成功了
                         //alert('获取数据成功')
-                        console.log(result.body.message)
-                        this.list = result.body.message
+                        console.log(result.body.content)
+                        this.list = result.body.content
                     }else{
                         //alert('获取数据失败')
                         console.log(result)
