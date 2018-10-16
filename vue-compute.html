@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="http://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="box">
+    {{msg}}
+    <hr>
+    <!--{{ msg.split('').reverse().join('') }} -->
+    {{ msg.contact }}
+</div>
+<script type="text/javascript">
+    var vm = new Vue({
+        el:'#box',
+        data:{
+            msg:['[赠品]美图（meitu）美图T9尊享礼盒',
+                '[赠品]美图 meitu 星月棒 自拍杆 美少女战士版',
+                '[赠品]美图 meitu MT019574 第二代补光灯']
+        }
+    });
+
+    console.log(vm.reMsg);
+</script>
+</body>
+</html>

@@ -9,55 +9,67 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css"
           data-filtered="filtered">
     <link rel="stylesheet" href="static/css/me.css">
+    <link rel="stylesheet" href="static/css/animate.css">
 
 </head>
 <body>
-
-
 <div class="ui container">
     <!--logo和标语-->
-    <div class="ui text borderless stackable menu small ">
-        <div class="">
+    <div class="ui text borderless menu small">
+        <div class="m-hide">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <img height="83" width="130" src="static/images/logo.png">
+            <img class="animated bounce" height="83" width="130" src="static/images/logo.png">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
-        <div class="ui label item">
+        <div class="m-display">
+            <img height="40" width="65" src="static/images/logo.png">
+        </div>
+        <div class="ui label item m-hide">
             <img src="static/images/bug.png">
             <h6>&nbsp;爬取各大网商</h6>
         </div>
-        <div class="ui label item">
+        <div class="ui label item m-hide">
             <img src="static/images/analyse.png">
             <h6>&nbsp;分析价格趋势</h6>
         </div>
-        <div class="ui label item">
+        <div class="ui label item m-hide">
             <img src="static/images/money.png">
             <h6>&nbsp;省钱省力省心</h6>
         </div>
-        <div class="item right fluid menu">
-            <div class=" ui fluid category search">
+        <div class="item right menu">
+            <div class=" ui item category search" style="width: 8rem">
                 <div class="ui icon input">
                     <input class="prompt" type="text" placeholder="搜索...">
                     <i class="search  pink link icon"></i>
                 </div>
                 <div class="results" data-filtered="filtered"></div>
             </div>
+            <div class=" ui item">
+                <button class="ui basic button" style="width: 8rem">
+                    <i class=" shopping bag pink icon"></i>
+                    收藏袋
+                    &nbsp;&nbsp;
+                    <div class="floating ui pink label">22</div>
+                </button>
+            </div>
         </div>
-        <div class="item fluid menu">
-            <button class="ui basic button">
-                <i class=" shopping bag pink icon"></i>
-                收藏袋
-                &nbsp;&nbsp;
-                <div class="floating ui pink label">22</div>
-            </button>
-        </div>
+
     </div>
 </div>
-<nav>
-    <div class="ui menu tiny borderless inverted pink stackable" style="padding-top: 0.01em">
+<nav class="m-display">
+    <div class="ui menu tiny borderless inverted pink stackable " style="padding-top: 0.01em">
+        <div class="ui container">
+            <a class="header item">
+                <h3 class="ui white inverted header">首页</h3>
+            </a>
+        </div>
+    </div>
+</nav>
+<nav class="m-hide">
+    <div class="ui menu tiny borderless inverted pink stackable " style="padding-top: 0.01em">
         <!--style="background-color: #FF1499"-->
         <!--首页标签-->
-        <div class="ui container">
+        <div class="ui container m-hide">
             <a class="header item">
                 <h3 class="ui white inverted header">首页</h3>
             </a>
@@ -117,7 +129,7 @@
             <a class="ui tag label"
                style="margin-left: 25px; margin-right: 50px; padding-left: 28px;padding-right: 28px">品牌：</a>
 
-            <div class="ui horizontal link list">
+            <div class="ui horizontal celled link list" style="margin-top: 6px;margin-left: 20px">
                 <a class="item active m-margin-right-35">
                     华为
                 </a>
@@ -192,7 +204,7 @@
             <a class="ui tag label" style="margin-left: 25px; margin-right: 50px;">
                 运行内存：
             </a>
-            <div class="ui horizontal link list">
+            <div class="ui horizontal celled link list" style="margin-top: 6px; margin-left: 20px">
                 <a class="item active m-margin-right-35">
                     1GB
                 </a>
@@ -232,8 +244,8 @@
             <a class="ui tag label" style="margin-left: 25px; margin-right: 50px;">
                 机身内存：
             </a>
-            <div class="ui horizontal link list">
-                <a class="item active  m-margin-right-35">
+            <div class="ui horizontal celled link list" style="margin-top: 6px; margin-left: 20px">
+                <a class="item active m-margin-right-35">
                     32GB
                 </a>
                 <a class="item active  m-margin-right-35">
@@ -294,11 +306,11 @@
             </div>
         </div>
         <!--选购热点选择-->
-        <div class="ui pink segment large">
+        <div class="ui pink segment large" style="margin-top: 10px">
             <a class="ui tag label" style="margin-left: 25px; margin-right: 50px;">
                 选购热点：
             </a>
-            <div class="ui horizontal link list">
+            <div class="ui horizontal celled link list" style="margin-top: 6px; margin-left: 20px">
                 <a class="item active  m-margin-right-35">
                     全面屏手机
                 </a>
@@ -364,12 +376,38 @@
         </div>
     </div>
 </div>
+<div id="app">
 <div class="ui container" style="margin-top: 25px;">
+    <!--<table>-->
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--<th>Id</th>-->
+            <!--<th>Name</th>-->
+            <!--<th>Ctime</th>-->
+            <!--<th>Operation</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr v-for="(item,index) in list" :key="item._id">&lt;!&ndash; key只接受字符串或number&ndash;&gt;-->
+            <!--<td>{{item.id}}</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+    <div class="ui qq icon button" data-content="The default theme's basic popup removes the pointing arrow." data-variation="basic">
+        <i class="add icon"></i>
+    </div>
+    <div class="ui qq icon button" data-content="The default theme's basic popup removes the pointing arrow." data-variation="basic">
+        <i class="add icon"></i>
+    </div>
+    <div class="ui qq icon button" data-content="The default theme's basic popup removes the pointing arrow." data-variation="basic">
+        <i class="add icon"></i>
+    </div>
     <h3 class="ui top attached horizontal divider header" style="padding-left: 100px;padding-right: 100px">
         <i class="product hunt pink icon"></i>
         商品展示
     </h3>
     <div class="ui attached segment">
+
        <!-- <div class="ui link cards">
             <div class="card">
                 <div class="image">
@@ -396,632 +434,46 @@
             </div>
         </div>-->
         <div class="ui four column grid cards stackable">
-            <a href="#" class="column">
-            <div class="ui fluid card">
-                <div class="image">
-                    <div class="ui right orange corner label">
-                        <i class="gift icon"></i>
+
+            <div class="column" v-for="(item,index) in list" :key="item._id">
+                <!--<table>-->
+                    <!--<tr v-for="(item,index) in list" :key="item._id">&lt;!&ndash; key只接受字符串或number&ndash;&gt;-->
+                        <!--<td>{{item.id}}</td>-->
+                    <!--</tr>-->
+                <!--</table>-->
+
+                <div class="ui fluid card">
+                    <div class="image">
+                        <!--:data-tooltip="item.salePromotionInfors[0].salePromotionValue"-->
+                        <div v-if="item.salePromotionInfors[0].salePromotionValue[0]" data-position="top center" data-variation="wide" :data-tooltip="item.salePromotionInfors[0].salePromotionValue[0]">
+                            <div class="ui right orange corner label">
+                                <i class="gift icon"></i>
+                            </div>
+                        </div>
+                        <img class="animated fadeIn" :src="item.phoneDisplay.thumbPic[0]">
                     </div>
-                    <img data-src="static/images/product.jpg">
-                </div>
-                <div class="content">
-                    <div class="description">
-                        小米 红米Note5 全网通版 4GB+64GB 魔力蓝 移动联通电信...
-                    </div>
-                </div>
-                <span class="extra content">
+                    <a class="content">
+                        <div class="description">
+                            {{item.phoneDisplay.name}}
+                            <!--小米 红米Note5 全网通版 4GB+64GB 魔力蓝 移动联通电信...-->
+                        </div>
+                    </a>
+                    <span class="extra content">
                         <span class="ui pink header" >
-                            <small>¥</small><big>999</big>
+                            <small>¥</small><big>{{item.prices[0].priceValue}}</big>
                             <!--                            <div class="ui mini inverted orange label">Mini </div>
                                                         <div class="ui mini inverted orange label">Mini </div>
                                                         <div class="ui mini inverted orange label">Mini </div>-->
                             <div style="float: right">
-                                <div class="ui mini pink horizontal label right" style="margin-right: 0.01em; margin-left: 0.01em">4GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">京东</div>
+                                <div class="ui mini pink horizontal label right" style="margin-right: 0.01em; margin-left: 0.01em">{{item.phoneDisplay.ram}}</div>
+                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">{{item.phoneDisplay.rom}}</div>
+                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">{{item.phoneDisplay.source}}</div>
                             </div>
                         </span>
                     </span>
-
-            </div>
-        </a>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product2.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            荣耀 畅玩7 2GB+16GB 黑色 全网通4G手机 双卡双待
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>599</big>
-                            <!--                            <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>-->
-
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">2GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">16GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">京东</div>
-                            </div>
-                        </span>
-                    </span>
-
                 </div>
             </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product3.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            HUAWEI nova 3 6GB+128GB 全网通
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>2999</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.1em">6GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">VIP</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
             </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product4.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            Xiaomi/小米 小米MIX2 6GB+128GB 黑色陶瓷版 移动联通电信4G...
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>2399</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">6GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">苏宁</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product5.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            分期免息 送充电宝蓝牙 Huawei/华为 mate8全网通4G手机...
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>1858</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.1em">3GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">64GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">天猫</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <a href="#" class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <div class="ui right orange corner label">
-                            <i class="gift icon"></i>
-                        </div>
-                        <img data-src="static/images/product.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            小米 红米Note5 全网通版 4GB+64GB 魔力蓝 移动联通电信...
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>999</big>
-                            <!--                            <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>-->
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label right" style="margin-right: 0.01em; margin-left: 0.01em">4GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">京东</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </a>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product2.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            荣耀 畅玩7 2GB+16GB 黑色 全网通4G手机 双卡双待
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>599</big>
-                            <!--                            <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>-->
-
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">2GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">16GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">京东</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product3.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            HUAWEI nova 3 6GB+128GB 全网通
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>2999</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.1em">6GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">VIP</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product4.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            Xiaomi/小米 小米MIX2 6GB+128GB 黑色陶瓷版 移动联通电信4G...
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>2399</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">6GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">苏宁</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product5.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            分期免息 送充电宝蓝牙 Huawei/华为 mate8全网通4G手机...
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>1858</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.1em">3GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">64GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">天猫</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <a href="#" class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <div class="ui right orange corner label">
-                            <i class="gift icon"></i>
-                        </div>
-                        <img data-src="static/images/product.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            小米 红米Note5 全网通版 4GB+64GB 魔力蓝 移动联通电信...
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>999</big>
-                            <!--                            <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>-->
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label right" style="margin-right: 0.01em; margin-left: 0.01em">4GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">京东</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </a>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product2.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            荣耀 畅玩7 2GB+16GB 黑色 全网通4G手机 双卡双待
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>599</big>
-                            <!--                            <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>-->
-
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">2GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">16GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">京东</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product3.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            HUAWEI nova 3 6GB+128GB 全网通
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>2999</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.1em">6GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">VIP</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product4.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            Xiaomi/小米 小米MIX2 6GB+128GB 黑色陶瓷版 移动联通电信4G...
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>2399</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">6GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">苏宁</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product5.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            分期免息 送充电宝蓝牙 Huawei/华为 mate8全网通4G手机...
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>1858</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.1em">3GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">64GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">天猫</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <a href="#" class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <div class="ui right orange corner label">
-                            <i class="gift icon"></i>
-                        </div>
-                        <img data-src="static/images/product.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            小米 红米Note5 全网通版 4GB+64GB 魔力蓝 移动联通电信...
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>999</big>
-                            <!--                            <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>-->
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label right" style="margin-right: 0.01em; margin-left: 0.01em">4GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">京东</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </a>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product2.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            荣耀 畅玩7 2GB+16GB 黑色 全网通4G手机 双卡双待
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>599</big>
-                            <!--                            <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>-->
-
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">2GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">16GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">京东</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product3.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            HUAWEI nova 3 6GB+128GB 全网通
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>2999</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.1em">6GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">VIP</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product4.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            Xiaomi/小米 小米MIX2 6GB+128GB 黑色陶瓷版 移动联通电信4G...
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>2399</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">6GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">苏宁</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product5.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            分期免息 送充电宝蓝牙 Huawei/华为 mate8全网通4G手机...
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>1858</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.1em">3GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">64GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">天猫</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <a href="#" class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <div class="ui right orange corner label">
-                            <i class="gift icon"></i>
-                        </div>
-                        <img data-src="static/images/product.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            小米 红米Note5 全网通版 4GB+64GB 魔力蓝 移动联通电信...
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>999</big>
-                            <!--                            <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>-->
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label right" style="margin-right: 0.01em; margin-left: 0.01em">4GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">京东</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </a>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product2.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            荣耀 畅玩7 2GB+16GB 黑色 全网通4G手机 双卡双待
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>599</big>
-                            <!--                            <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>
-                                                        <div class="ui mini inverted orange label">Mini </div>-->
-
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">2GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">16GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">京东</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product3.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            HUAWEI nova 3 6GB+128GB 全网通
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>2999</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.1em">6GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">VIP</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product4.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            Xiaomi/小米 小米MIX2 6GB+128GB 黑色陶瓷版 移动联通电信4G...
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>2399</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">6GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">128GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">苏宁</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui fluid card">
-                    <div class="image">
-                        <img data-src="static/images/product5.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            分期免息 送充电宝蓝牙 Huawei/华为 mate8全网通4G手机...
-                        </div>
-                    </div>
-                    <span class="extra content">
-                        <span class="ui pink header" >
-                            <small>¥</small><big>1858</big>
-                            <div style="float: right">
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.1em">3GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">64GB</div>
-                                <div class="ui mini pink horizontal label" style="margin-right: 0.01em; margin-left: 0.01em">天猫</div>
-                            </div>
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-
         </div>
     </div>
     <div class="ui bottom attached header">
@@ -1073,7 +525,7 @@
         </div>
     </div>
 </div>
-
+</div>
 
 <footer style="margin-top: 50px">
     <div class="ui vertical pink footer segment" style="padding-top: 50px">
@@ -1125,10 +577,46 @@
             </div>
         </div>
     </div>
-
 </footer>
+<bottom>
+
+</bottom>
+<script src="./static/js/vue-2.4.0.js"></script>
+<script src="./static/js/vue-resource-1.3.4.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js" data-filtered="filtered"></script>
+<script>
+
+    var vm = new Vue({
+        el:'#app',
+        data: {
+            list:[],
+            mini:'mini'
+        },
+        created(){ //当vm实例的data 和 methods 初始化完毕后，VM实例会自动执行
+            this.getAllList()
+        },
+        mounted(){ //当vm实例的data 和 methods 初始化完毕后，VM实例会自动执行
+
+        },
+        methods: {
+            getAllList(){
+                //获取所有的车的品牌列表
+                //导入了vue resource 这个包后可以直接通过this.$http来发起数据请求
+                this.$http.get('http://localhost:8088/').then(result => {
+                    if(result.status === 200) {
+                        //成功了
+                        console.log(result.body.data)
+                        this.list = result.body.data
+                        console.log(this.list)
+                    }else{
+                        console.log(result.data)
+                    }
+                })
+            }
+        }
+    });
+</script>
 <script>
     $('#dropdown-one')
         .dropdown()
@@ -1142,11 +630,183 @@
     $('#dropdown-four')
         .dropdown()
     ;
-    $('.ui.attached.segment .image img')
+    $('.ui.attached.segment img')
         .visibility({
             type       : 'image',
             transition : 'fade in',
             duration   : 1000
+        })
+    ;
+    $('.qq').popup();
+//和append哪里相同就好了
+    $('.ui.attached.segment')
+        .visibility({
+            once: false,
+            // update size when new content loads
+            observeChanges: true,
+            // load content on bottom edge visible
+            onBottomVisible: function() {
+                // loads a max of 5 times
+                console.log('123456')
+                $('.ui.attached.segment').append('    <div class="ui divider"></div>\n' +
+                    '    <p>101112</p>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>\n' +
+                    '    <br>')
+
+            }
         })
     ;
 </script>

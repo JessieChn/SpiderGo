@@ -7,7 +7,15 @@
     <link rel="stylesheet" href="static/css/me.css">
 </head>
 <body>
+<div class="ui icon button" data-content="The default theme's basic popup removes the pointing arrow." data-variation="basic">
+    <i class="add icon"></i>
+</div>
 <div class="ui demo segment">
+    <i class="circular heart icon link" data-content="Hello. This is a mini popup" data-variation="mini"></i>
+    <i class="circular heart icon link" data-content="Hello. This is a tiny popup" data-variation="tiny"></i>
+    <i class="circular heart icon link" data-content="Hello. This is a small popup" data-variation="small"></i>
+    <i class="circular heart icon link" data-content="Hello. This is a large popup" data-variation="large"></i>
+    <i class="circular heart icon link" data-content="Hello. This is a huge popup" data-variation="huge"></i>
     <h3 class="ui dividing center aligned header">Infinite Scroll Example</h3>
     <p>123</p>
     <br>
@@ -22,7 +30,12 @@
     <br>
     <br>
     <br>
-    <div class="ui divider"></div>
+    <div class="ui icon button" data-content="Add users to your feed">
+        <i class="add icon"></i>
+    </div>
+    <div class="ui divider">
+
+    </div>
     <p>456</p>
     <br>
     <br>
@@ -37,6 +50,7 @@
     <br>
     <br>
     <div class="ui divider"></div>
+
     <p>789</p>
     <br>
     <br>
@@ -96,6 +110,11 @@
                     '    <br>')
 
             }
+        })
+    ;
+    $('.button')
+        .popup({
+            boundary: '.boundary.example .segment'
         })
     ;
 </script>

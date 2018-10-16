@@ -14,3 +14,25 @@
 .m-margin-right-35 {
     margin-right: 30px; !important;
 }
+
+@media screen and (max-width: 780px) {
+    /*缩小的时候隐藏了*/
+    .m-hide {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+}
+
+@media screen and (min-width: 779px) {
+    /*放大的时候隐藏了*/
+    .m-display{
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+        display: none;
+    }
+}
+.m-margin-left {
+    margin-left: 150px; !important;
+}
